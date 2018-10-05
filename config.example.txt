@@ -2,4 +2,3 @@
 # Each line should contain: vault_key file_path
 # onvault.sh will read vault_key secret from vault server and save it under file_path.
 secret/onvault/id_rsa ${HOME}/.ssh/id_rsa
-secret/onvault/id_rsa.pub ${HOME}/.ssh/id_rsa.pub
