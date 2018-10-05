@@ -40,7 +40,8 @@ Onvault will read `value` field from `secret/id_rsa` Vault secret and save it un
     ```Dockerfile
     ARG VAULT_ADDR
     ARG VAULT_TOKEN
-    RUN curl -sL 
+    RUN curl -s -o /usr/local/bin/onvault https://raw.githubusercontent.com/UXPin/onvault/v1.0/onvault.sh && \
+        chmod +x /usr/local/bin/onvault
     ```
 1. Modify Dockerfile steps that require secrets:
     ```Dockerfile
