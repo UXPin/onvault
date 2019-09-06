@@ -48,3 +48,20 @@ Onvault will read `value` field from `secret/id_rsa` Vault secret and save it un
     RUN /onvault.sh git clone ...
     ```
 1. When executing build remember to pass `VAULT_ADDR` and `VAULT_TOKEN`
+
+## Cavetas
+
+When executing commands with quoted arguments they must be double quoted, e.g.:
+
+```
+onvault.sh bash -c "'make; make install'"
+```
+
+## Development
+
+Running tests:
+
+```
+cd tests
+make tests
+```
