@@ -1,5 +1,5 @@
 #!/bin/bash -e
-set -x
+
 # validate privileges
 if [[ !`aws secretsmanager list-secrets` > /dev/null ]]; then
   echo "You're not privileged to read AWS secrets"
