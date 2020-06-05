@@ -1,1 +1,0 @@
-secret/onvault/secret_fixture ${HOME}/vault_secret_fixture
