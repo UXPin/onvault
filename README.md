@@ -1,8 +1,8 @@
-# onsecret
+# onvault
 
 Temporarily expose AWS secrets as files. Dedicated for use in Dockerfiles / docker builds.
 
-Example usage: `/onsecret.sh npm install`
+Example usage: `/onvault.sh npm install`
 Script will: 
 
 1. Load secrets from AWS Secrets Manager,
@@ -17,12 +17,12 @@ Script requires IAM privileges to access AWS Secrets Manager service.
 
 1. In Dockerfile add:
     ```Dockerfile
-    RUN curl -s -o /usr/local/bin/onsecret https://raw.githubusercontent.com/UXPin/onsecret/v1.0/onsecret.sh && \
-        chmod +x /usr/local/bin/onsecret
+    RUN curl -s -o /usr/local/bin/onvault https://raw.githubusercontent.com/UXPin/onvault/v1.0/onvault.sh && \
+        chmod +x /usr/local/bin/onvault
     ```
 1. Modify Dockerfile steps that require secrets:
     ```Dockerfile
-    RUN /onsecret.sh git clone ...
+    RUN /onvault.sh git clone ...
     ```
 
 ## Cavetas
