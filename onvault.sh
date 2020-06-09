@@ -30,11 +30,11 @@ function unload_secret {
 # cleanup function (will be executed on exit)
 function cleanup {
   unload_secret vault/npmrc ${HOME}/.npmrc
-  unload_secret vault/id_rsa ${HOME}/id_rsa
+  unload_secret vault/id_rsa ${HOME}/.ssh/id_rsa
   log "secrets removed"
 }
 trap cleanup EXIT INT
 
 load_secret vault/npmrc ${HOME}/.npmrc
-load_secret vault/id_rsa ${HOME}/id_rsa
+load_secret vault/id_rsa ${HOME}/.ssh/id_rsa
 eval "$@"
