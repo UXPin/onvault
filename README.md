@@ -17,7 +17,7 @@ Script requires IAM privileges to access AWS Secrets Manager service.
 
 1. In Dockerfile add:
     ```Dockerfile
-    RUN curl -s -o /usr/local/bin/onvault https://raw.githubusercontent.com/UXPin/onvault/v1.0/onvault.sh && \
+    RUN curl -s -o /usr/local/bin/onvault https://raw.githubusercontent.com/UXPin/onvault/v2.0/onvault.sh && \
         chmod +x /usr/local/bin/onvault
     ```
 1. Modify Dockerfile steps that require secrets:
